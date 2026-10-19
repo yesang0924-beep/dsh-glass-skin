@@ -1,11 +1,11 @@
 {
   "name": "dsh-glass-skin",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "private": true,
   "type": "module",
   "description": "Glass Skin — a glass-material theme for the DeepSeek Harness Web UI. The material ladder, reading scale, states and scene rules are frozen; the wallpaper is the only variable.",
   "license": "MIT",
-  "author": "yesang0924-beep",
+  "author": "Leaf King",
   "homepage": "https://github.com/yesang0924-beep/dsh-glass-skin#readme",
   "repository": {
     "type": "git",

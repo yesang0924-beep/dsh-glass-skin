@@ -28,7 +28,7 @@ window.__ModuleLoader__.load({
   id: 'dsh-glass-skin',
   factory(require) {
     const SOURCE = 'dsh-glass-skin';
-    const VERSION = '6.0.1';
+    const VERSION = '6.0.2';
     const WALLPAPER_DEFAULT_URL = '/api/dsh-glass-skin/assets?f=wallpaper.jpg';
     const MODE_KEY = 'dsh-glass-skin:mode';
     const MODES = ['ambient', 'focus'];

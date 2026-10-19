@@ -2,6 +2,12 @@
 
 本文件只记“用户能感知的变化”和“会影响稳定性/安装的改动”。材质与设计的完整依据在 `DESIGN.md`，冻结基线在 `docs/BASELINE-5.0.md`。
 
+## 6.0.2 — 2026-10-19 · 作者署名改为 Leaf King
+
+- 作者署名统一为 **Leaf King**：`package.json` 的 `author`、`LICENSE` 版权行、README 许可行与后续 git 提交作者。
+- GitHub 登录名仍是 `yesang0924-beep`，仓库地址与 Releases 链接不变；GitHub 个人资料的显示名需在账号设置里单独修改。
+- 运行时、材质、样式与功能与 6.0.1 完全相同，发布包仅元数据不同。
+
 ## 6.0.1 — 2026-10-19 · 类型检查门禁（运行时无变化）
 
 - 新增 `npm run typecheck`：`index.js` / `client.js` 顶部 `// @ts-check`，用 JSDoc 标注 Cordis 上下文（`HostContext` / `HostScope` / `HostWebServer`）与宿主接口；`types.d.ts` 声明 `window.__ModuleLoader__`。
