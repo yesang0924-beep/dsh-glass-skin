@@ -57,10 +57,10 @@ plugin_manager(action="install_bundle", target="D:/path/to/dsh-glass-skin")
 
 **方式二：发布包**
 
-到 [Releases](https://github.com/yesang0924-beep/dsh-glass-skin/releases) 下载 `dsh-glass-skin-6.0.0.tgz`，解包成目录后安装：
+到 [Releases](https://github.com/yesang0924-beep/dsh-glass-skin/releases) 下载 `dsh-glass-skin-6.0.1.tgz`，解包成目录后安装：
 
 ```powershell
-tar -xzf dsh-glass-skin-6.0.0.tgz -C .\glass-skin
+tar -xzf dsh-glass-skin-6.0.1.tgz -C .\glass-skin
 ```
 
 ```text

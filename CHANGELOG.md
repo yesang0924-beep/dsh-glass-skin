@@ -2,6 +2,13 @@
 
 本文件只记“用户能感知的变化”和“会影响稳定性/安装的改动”。材质与设计的完整依据在 `DESIGN.md`，冻结基线在 `docs/BASELINE-5.0.md`。
 
+## 6.0.1 — 2026-10-19 · 类型检查门禁（运行时无变化）
+
+- 新增 `npm run typecheck`：`index.js` / `client.js` 顶部 `// @ts-check`，用 JSDoc 标注 Cordis 上下文（`HostContext` / `HostScope` / `HostWebServer`）与宿主接口；`types.d.ts` 声明 `window.__ModuleLoader__`。
+- `tsconfig.json` 只做 `--noEmit` 检查；`typescript` 与 `@types/node` 仅作 devDependency，CI 走 `npm ci → typecheck → verify`，运行时仍然零依赖。
+- 首跑修掉两处类型问题：`CSSStyleDeclaration.webkitBackdropFilter` 改用显式断言，`Error.status` 改用交叉类型。
+- 发布包 `dsh-glass-skin-6.0.1.tgz` 与源码一致；材质、样式、行为与 6.0.0 完全相同。
+
 ## 6.0.0 — 2026-10-19 · 改名 dsh-glass-skin，首次开源发布
 
 **改名**
