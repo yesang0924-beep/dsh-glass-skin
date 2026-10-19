@@ -14,7 +14,7 @@
 
 </div>
 
-![Glass Skin 深色界面（合成夹具预览）](docs/screenshots/preview-dark.jpg)
+![Glass Skin 首页](docs/screenshots/hero.jpg)
 
 ## 这是什么
 
@@ -37,7 +37,7 @@ Glass Skin 把 DSH 的 Web 界面当成一间玻璃工作室：壁纸是场景�
 
 ![Glass Skin 浅色界面（合成夹具预览）](docs/screenshots/preview-light.jpg)
 
-> 预览图由合成夹具渲染，只用于展示材质、排版与层级；不含真实会话、账号、本地路径或对话内容。
+> 首页预览为真机截图，账号名与工作区名已模糊处理；浅色预览由合成夹具渲染。两张图都不含真实会话、本地路径或对话内容。
 
 ## 安装
 
