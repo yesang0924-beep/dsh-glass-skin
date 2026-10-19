@@ -14,7 +14,7 @@
 
 </div>
 
-![Glass Skin 深色界面（合成夹具预览）](docs/screenshots/dark.jpg)
+![Glass Skin 深色界面（合成夹具预览）](docs/screenshots/preview-dark.jpg)
 
 ## 这是什么
 
@@ -35,7 +35,7 @@ Glass Skin 把 DSH 的 Web 界面当成一间玻璃工作室：壁纸是场景�
 | **设置页自检** | 6 个必需钩子 + 6 个条件区域，命中情况一眼可见；可复制完整 JSON 报告 |
 | **壁纸导入** | 拖放或选择文件；Host 按 magic bytes 只收 JPEG / PNG / WebP，上限 32MB |
 
-![Glass Skin 浅色界面（合成夹具预览）](docs/screenshots/light.jpg)
+![Glass Skin 浅色界面（合成夹具预览）](docs/screenshots/preview-light.jpg)
 
 > 预览图由合成夹具渲染，只用于展示材质、排版与层级；不含真实会话、账号、本地路径或对话内容。
 
