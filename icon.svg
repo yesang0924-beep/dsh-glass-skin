@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Glass Skin">
+  <defs>
+    <linearGradient id="gs-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101f2c"/>
+      <stop offset="1" stop-color="#2b4a5f"/>
+    </linearGradient>
+    <radialGradient id="gs-warm" cx="0.72" cy="0.28" r="0.55">
+      <stop offset="0" stop-color="#ffd9a6" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#f0b46a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gs-pane" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#eaf7ff" stop-opacity="0.42"/>
+      <stop offset="0.55" stop-color="#bfe4f6" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#8fc7e2" stop-opacity="0.30"/>
+    </linearGradient>
+    <linearGradient id="gs-sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#gs-bg)"/>
+  <circle cx="46" cy="18" r="14" fill="url(#gs-warm)"/>
+  <rect x="12.5" y="13.5" width="39" height="37" rx="9" fill="url(#gs-pane)" stroke="#d8f0ff" stroke-opacity="0.5" stroke-width="1"/>
+  <path d="M17 16.5h30" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M17 42 34 17" stroke="url(#gs-sheen)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+  <rect x="21" y="24" width="22" height="18" rx="6" fill="#ffffff" fill-opacity="0.06" stroke="#cfeaf9" stroke-opacity="0.22"/>
+  <circle cx="45" cy="19" r="2.4" fill="#ffe2b4"/>
+</svg>

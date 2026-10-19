@@ -1,0 +1,16 @@
+# Local development artifacts
+node_modules/
+.tmp/
+dist/
+
+# Screenshots: only the curated set in docs/screenshots/ ships.
+# docs/shots/ holds traceable A/B evidence that stays on the author's machine.
+docs/shots/
+docs/*.png
+
+# Local visual QA scripts. They drive a Windows desktop, a CDP browser and
+# absolute paths, so they are not portable; the real gates ship instead.
+tools/*
+!tools/verify.mjs
+!tools/continuous-glass.test.mjs
+!tools/migration.test.mjs

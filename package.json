@@ -1,0 +1,86 @@
+{
+  "name": "dsh-glass-skin",
+  "version": "6.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Glass Skin — a glass-material theme for the DeepSeek Harness Web UI. The material ladder, reading scale, states and scene rules are frozen; the wallpaper is the only variable.",
+  "license": "MIT",
+  "author": "yesang0924-beep",
+  "homepage": "https://github.com/yesang0924-beep/dsh-glass-skin#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yesang0924-beep/dsh-glass-skin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yesang0924-beep/dsh-glass-skin/issues"
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.0-0 <0.3.0-0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/wallpaper.jpg",
+    "assets/wallpapers/*",
+    "tools/continuous-glass.test.mjs",
+    "tools/migration.test.mjs",
+    "tools/verify.mjs",
+    "DESIGN.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-theme"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4",
+    "@deepseek-ai/dsh-client-ui-theme": ">=0.2.0-0 <0.3.0-0",
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-client-ui-theme": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "check": "node --check client.js && node --check index.js",
+    "test": "node tools/continuous-glass.test.mjs && node tools/migration.test.mjs",
+    "verify": "node tools/verify.mjs",
+    "pack:release": "npm pack --pack-destination dist"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skin",
+    "theme",
+    "glass",
+    "glassmorphism",
+    "wallpaper"
+  ]
+}
