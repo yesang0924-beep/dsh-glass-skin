@@ -12,9 +12,11 @@ Thanks for taking a look at Glass Skin.
 
 ```powershell
 node tools/verify.mjs
+npm install
+npm run typecheck
 ```
 
-必须全过（结构回归 42/42 + 迁移 1/1 + `ALL PACKAGE CHECKS PASSED`）。
+必须全过（结构回归 42/42 + 迁移 1/1 + `ALL PACKAGE CHECKS PASSED`，类型检查零错误）。`tsc` 只在开发/CI 使用，不进入运行时与发布包。
 
 ## 规则
 

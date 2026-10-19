@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * dsh-glass-skin — Host half.
  *
@@ -337,6 +338,7 @@ async function listWallpapers() {
 async function readUpload(req) {
   const declared = Number(req.headers?.['content-length'] ?? NaN);
   if (Number.isFinite(declared) && declared > MAX_UPLOAD_BYTES) {
+    /** @type {Error & { status?: number }} */
     const error = new Error('image too large');
     error.status = 413;
     throw error;
@@ -346,6 +348,7 @@ async function readUpload(req) {
   for await (const chunk of req) {
     size += chunk.length;
     if (size > MAX_UPLOAD_BYTES) {
+      /** @type {Error & { status?: number }} */
       const error = new Error('image too large');
       error.status = 413;
       throw error;
@@ -484,6 +487,24 @@ function migrateLegacyData() {
   return adopted;
 }
 
+/**
+ * Minimal structural types for the Cordis plugin context. They are checked by
+ * `tsc` only (`npm run typecheck`); at runtime the host passes whatever it has.
+ *
+ * @typedef {object} HostWebServer
+ * @property {(route: { kind: 'exact', path: string, handler: (req: any, res: any) => unknown }) => () => void} register
+ *
+ * @typedef {object} HostScope
+ * @property {(name: string) => any} get
+ * @property {(effect: () => (() => void), label?: string) => void} effect
+ *
+ * @typedef {object} HostContext
+ * @property {(names: string[], mount: (scope: HostScope) => void) => void} inject
+ * @property {(effect: () => void, label?: string) => void} effect
+ * @property {{ info?: (message: string) => void, warn?: (message: string) => void }} [logger]
+ */
+
+/** @param {HostContext} ctx */
 export function apply(ctx) {
   // Create the drop folder before the first request so the settings text can
   // point at a directory that already exists.
@@ -499,6 +520,7 @@ export function apply(ctx) {
   }
 
   ctx.inject(['webServer'], (scope) => {
+    /** @type {HostWebServer | undefined} */
     const webServer = scope.get('webServer');
     if (webServer === undefined) return;
 

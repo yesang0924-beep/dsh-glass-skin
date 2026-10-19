@@ -71,7 +71,8 @@
     "check": "node --check client.js && node --check index.js",
     "test": "node tools/continuous-glass.test.mjs && node tools/migration.test.mjs",
     "verify": "node tools/verify.mjs",
-    "pack:release": "npm pack --pack-destination dist"
+    "pack:release": "npm pack --pack-destination dist",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "dsh",
@@ -82,5 +83,9 @@
     "glass",
     "glassmorphism",
     "wallpaper"
-  ]
+  ],
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
 }

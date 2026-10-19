@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * dsh-glass-skin — Client half (DSH Web UI).
  *
@@ -725,7 +726,7 @@ window.__ModuleLoader__.load({
           found: true,
           background: style.backgroundColor,
           image: style.backgroundImage,
-          blur: style.backdropFilter || style.webkitBackdropFilter || 'none',
+          blur: style.backdropFilter || /** @type {any} */ (style).webkitBackdropFilter || 'none',
           z: style.zIndex,
         };
       };
@@ -763,7 +764,7 @@ window.__ModuleLoader__.load({
       let computed = 'no card';
       if (card !== null) {
         const style = window.getComputedStyle(card);
-        computed = style.backdropFilter || style.webkitBackdropFilter || 'empty';
+        computed = style.backdropFilter || /** @type {any} */ (style).webkitBackdropFilter || 'empty';
       }
       return {
         shell: shellDiagnostics(),

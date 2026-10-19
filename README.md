@@ -113,6 +113,15 @@ node tools/verify.mjs
 
 结构回归证明规则确实落到了代码里，不等于观感验收：整体好不好看仍要在真窗口里看。
 
+类型检查是开发/CI 用的另一道门（运行时零依赖，`tsc` 不进发布包）：
+
+```powershell
+npm install
+npm run typecheck
+```
+
+来源文件用 `// @ts-check` + JSDoc 标注 Cordis 上下文与宿主接口，`tsconfig.json` 只做 `--noEmit` 检查。
+
 ## 项目结构
 
 ```text
